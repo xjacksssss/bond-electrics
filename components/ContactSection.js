@@ -36,7 +36,7 @@ export default function ContactSection() {
           <Col lg={5}>
             <div className="h-100">
               {/* Phone */}
-              <Card className="border-0 shadow-sm mb-3">
+              <Card className="border-0 shadow-sm mb-3 contact-info-card">
                 <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
@@ -64,7 +64,7 @@ export default function ContactSection() {
               </Card>
 
               {/* Email */}
-              <Card className="border-0 shadow-sm mb-3">
+              <Card className="border-0 shadow-sm mb-3 contact-info-card">
                 <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
@@ -80,7 +80,7 @@ export default function ContactSection() {
                       <a 
                         href="mailto:info@bondelectrics.co.uk" 
                         className="text-decoration-none d-block fw-semibold"
-                        style={{ wordBreak: 'break-word' }}
+                        style={{ color: 'var(--color-primary)' }}
                       >
                         info@bondelectrics.co.uk
                       </a>
@@ -93,7 +93,7 @@ export default function ContactSection() {
               </Card>
 
               {/* Opening Times */}
-              <Card className="border-0 shadow-sm">
+              <Card className="border-0 shadow-sm contact-info-card">
                 <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
@@ -106,17 +106,24 @@ export default function ContactSection() {
                     </div>
                     <div className="ms-3">
                       <h5 className="mb-2 fs-6">Opening Times</h5>
-                      <ul className="list-unstyled mb-0 small">
-                        <li className="mb-1">
-                          <strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM
-                        </li>
-                        <li className="mb-1">
-                          <strong>Saturday:</strong> 9:00 AM - 4:00 PM
-                        </li>
-                        <li className="mb-1">
-                          <strong>Sunday:</strong> Emergency Only
-                        </li>
-                      </ul>
+                      <div className="small">
+                        <div className="d-flex justify-content-between mb-1">
+                          <span className="text-secondary">Monday - Friday:</span>
+                          <span className="fw-semibold">8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div className="d-flex justify-content-between mb-1">
+                          <span className="text-secondary">Saturday:</span>
+                          <span className="fw-semibold">9:00 AM - 4:00 PM</span>
+                        </div>
+                        <div className="d-flex justify-content-between mb-1">
+                          <span className="text-secondary">Sunday:</span>
+                          <span className="fw-semibold">Emergency Only</span>
+                        </div>
+                        <p className="text-secondary small mb-0 mt-2">
+                          <i className="fas fa-info-circle me-1"></i>
+                          24/7 emergency callout available
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </Card.Body>

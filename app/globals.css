@@ -150,66 +150,52 @@ section#contact {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Contact Info Cards - Override height to auto */
+.contact-info-card {
+  height: auto !important;
+}
+
 .card-img-top {
   border-radius: 1rem 1rem 0 0;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
+}
+
+/* Utility Classes */
+.bg-primary-custom {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary-custom {
+  background-color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-primary-custom {
+  color: var(--color-primary);
+}
+
+.text-secondary-custom {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
 }
 
 /* Background Patterns */
 .bg-light-pattern {
   background-color: var(--color-bg-secondary);
   background-image: 
-    linear-gradient(30deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
-    linear-gradient(150deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
-    linear-gradient(30deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
-    linear-gradient(150deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0);
+    linear-gradient(30deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
+    linear-gradient(150deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
+    linear-gradient(30deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
+    linear-gradient(150deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px;
-}
-
-/* Custom Color Classes */
-.bg-primary-custom {
-  background-color: var(--color-primary) !important;
-}
-
-.bg-secondary-custom {
-  background-color: var(--color-secondary) !important;
-}
-
-.bg-accent {
-  background-color: var(--color-accent) !important;
-}
-
-.text-primary-custom {
-  color: var(--color-primary) !important;
-}
-
-.text-secondary-custom {
-  color: var(--color-secondary) !important;
-}
-
-.text-accent {
-  color: var(--color-accent) !important;
-}
-
-/* Phone Link Styling */
-.phone-link {
-  color: var(--color-primary);
-  font-size: 1.25rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.phone-link:hover {
-  color: var(--color-secondary);
-  transform: scale(1.05);
-}
-
-/* Navbar Scrolled State */
-.navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(10px);
 }
 
 /* Animations */
@@ -228,45 +214,38 @@ section#contact {
   animation: fadeInUp 0.8s ease-out;
 }
 
-/* Service Card Icon Styling */
-.service-icon {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: white;
-  font-size: 2rem;
-  margin: 0 auto 1.5rem;
-  transition: all 0.3s ease;
+/* Navbar Scrolled State */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
 }
 
-.card:hover .service-icon {
-  transform: scale(1.1) rotate(5deg);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-/* Testimonial Card Styling */
-.testimonial-card {
-  position: relative;
-  padding-top: 2rem;
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
 }
 
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 5rem;
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #001a45;
+}
+
+/* Phone Link Styling */
+.phone-link {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.phone-link:hover {
   color: var(--color-secondary);
-  opacity: 0.2;
-  font-family: Georgia, serif;
-}
-
-/* Star Rating */
-.star-rating {
-  color: #ffc107;
 }
 
 /* Responsive Typography */
@@ -274,70 +253,36 @@ section#contact {
   section {
     padding: 3rem 0;
   }
-  
+
   section#contact {
     padding: 2rem 0;
   }
-  
+
   .section-title {
     margin-bottom: 2rem;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
-  
+
   h3 {
     font-size: 1.5rem;
   }
 }
 
-/* Utility Classes */
-.shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-}
-
-.shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
-/* Form Styling */
-.form-control:focus {
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 0.2rem rgba(144, 148, 254, 0.25);
-}
-
-.form-select:focus {
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 0.2rem rgba(144, 148, 254, 0.25);
-}
-
-/* Loading Spinner */
-.spinner-border-sm {
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.15em;
-}
-
-/* Accessibility */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
 }
 
 /* Print Styles */
@@ -347,7 +292,7 @@ section#contact {
   footer {
     display: none;
   }
-  
+
   section {
     page-break-inside: avoid;
   }
