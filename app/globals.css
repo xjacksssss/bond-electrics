@@ -106,13 +106,18 @@ a {
 
 /* Section Styling */
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   position: relative;
+}
+
+/* Reduce padding specifically for contact section */
+section#contact {
+  padding: 3rem 0;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 
@@ -154,22 +159,57 @@ section {
 /* Background Patterns */
 .bg-light-pattern {
   background-color: var(--color-bg-secondary);
-  position: relative;
+  background-image: 
+    linear-gradient(30deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
+    linear-gradient(150deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
+    linear-gradient(30deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0),
+    linear-gradient(150deg, #f0f0f0 12%, transparent 12.5%, transparent 87%, #f0f0f0 87.5%, #f0f0f0);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px;
 }
 
-.bg-light-pattern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(30deg, rgba(144, 148, 254, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(144, 148, 254, 0.05) 87.5%, rgba(144, 148, 254, 0.05)),
-    linear-gradient(150deg, rgba(144, 148, 254, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(144, 148, 254, 0.05) 87.5%, rgba(144, 148, 254, 0.05));
-  background-size: 80px 140px;
-  opacity: 0.3;
-  pointer-events: none;
+/* Custom Color Classes */
+.bg-primary-custom {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-secondary-custom {
+  background-color: var(--color-secondary) !important;
+}
+
+.bg-accent {
+  background-color: var(--color-accent) !important;
+}
+
+.text-primary-custom {
+  color: var(--color-primary) !important;
+}
+
+.text-secondary-custom {
+  color: var(--color-secondary) !important;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Phone Link Styling */
+.phone-link {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/* Navbar Scrolled State */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
 }
 
 /* Animations */
@@ -185,102 +225,130 @@ section {
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.8s ease-out;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.pulse {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-/* Loading Spinner */
-.spinner-border-custom {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-width: 0.2rem;
-}
-
-/* Form Styles */
-.form-control:focus {
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 0.2rem rgba(144, 148, 254, 0.25);
-}
-
-.form-label {
-  font-weight: 600;
-  color: var(--color-text-primary);
-  margin-bottom: 0.5rem;
-}
-
-/* Utility Classes */
-.text-primary-custom {
-  color: var(--color-primary) !important;
-}
-
-.text-secondary-custom {
-  color: var(--color-secondary) !important;
-}
-
-.text-accent {
-  color: var(--color-accent) !important;
-}
-
-.bg-primary-custom {
-  background-color: var(--color-primary) !important;
-}
-
-.bg-secondary-custom {
-  background-color: var(--color-secondary) !important;
-}
-
-/* Responsive Utilities */
-@media (max-width: 768px) {
-  section {
-    padding: 3rem 0;
-  }
-  
-  .section-title {
-    margin-bottom: 2rem;
-  }
-}
-
-/* Icon Styles */
-.icon-box {
-  width: 70px;
-  height: 70px;
+/* Service Card Icon Styling */
+.service-icon {
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0 auto 1.5rem;
   transition: all 0.3s ease;
 }
 
-.card:hover .icon-box {
+.card:hover .service-icon {
   transform: scale(1.1) rotate(5deg);
 }
 
-/* Phone Link Styles */
-.phone-link {
-  color: var(--color-accent);
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
+/* Testimonial Card Styling */
+.testimonial-card {
+  position: relative;
+  padding-top: 2rem;
 }
 
-.phone-link:hover {
-  color: #00a043;
-  transform: scale(1.05);
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 5rem;
+  color: var(--color-secondary);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+/* Star Rating */
+.star-rating {
+  color: #ffc107;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  section#contact {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Utility Classes */
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Form Styling */
+.form-control:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(144, 148, 254, 0.25);
+}
+
+.form-select:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(144, 148, 254, 0.25);
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .btn,
+  footer {
+    display: none;
+  }
+  
+  section {
+    page-break-inside: avoid;
+  }
 }

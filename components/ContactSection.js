@@ -18,7 +18,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <Row className="g-5">
+        <Row className="g-4">
           {/* Contact Form */}
           <Col lg={7}>
             <Card className="border-0 shadow-lg">
@@ -36,26 +36,26 @@ export default function ContactSection() {
           <Col lg={5}>
             <div className="h-100">
               {/* Phone */}
-              <Card className="border-0 shadow-sm mb-4">
-                <Card.Body className="p-4">
+              <Card className="border-0 shadow-sm mb-3">
+                <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
                       <div 
                         className="rounded-circle bg-primary-custom text-white d-flex align-items-center justify-content-center"
-                        style={{ width: '60px', height: '60px' }}
+                        style={{ width: '50px', height: '50px' }}
                       >
-                        <i className="fas fa-phone fa-lg"></i>
+                        <i className="fas fa-phone"></i>
                       </div>
                     </div>
-                    <div className="ms-4">
-                      <h5 className="mb-2">Phone</h5>
+                    <div className="ms-3">
+                      <h5 className="mb-1 fs-6">Phone</h5>
                       <a 
                         href="tel:07938008007" 
-                        className="phone-link text-decoration-none d-block"
+                        className="phone-link text-decoration-none d-block fw-semibold"
                       >
                         07938 008 007
                       </a>
-                      <p className="text-secondary small mb-0 mt-2">
+                      <p className="text-secondary small mb-0 mt-1">
                         Available 24/7 for emergencies
                       </p>
                     </div>
@@ -64,26 +64,27 @@ export default function ContactSection() {
               </Card>
 
               {/* Email */}
-              <Card className="border-0 shadow-sm mb-4">
-                <Card.Body className="p-4">
+              <Card className="border-0 shadow-sm mb-3">
+                <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
                       <div 
                         className="rounded-circle bg-secondary-custom text-white d-flex align-items-center justify-content-center"
-                        style={{ width: '60px', height: '60px' }}
+                        style={{ width: '50px', height: '50px' }}
                       >
-                        <i className="fas fa-envelope fa-lg"></i>
+                        <i className="fas fa-envelope"></i>
                       </div>
                     </div>
-                    <div className="ms-4">
-                      <h5 className="mb-2">Email</h5>
+                    <div className="ms-3">
+                      <h5 className="mb-1 fs-6">Email</h5>
                       <a 
                         href="mailto:info@bondelectrics.co.uk" 
-                        className="text-decoration-none d-block"
+                        className="text-decoration-none d-block fw-semibold"
+                        style={{ wordBreak: 'break-word' }}
                       >
                         info@bondelectrics.co.uk
                       </a>
-                      <p className="text-secondary small mb-0 mt-2">
+                      <p className="text-secondary small mb-0 mt-1">
                         We'll respond within 24 hours
                       </p>
                     </div>
@@ -91,46 +92,31 @@ export default function ContactSection() {
                 </Card.Body>
               </Card>
 
-              {/* Location */}
-              <Card className="border-0 shadow-sm mb-4">
-                <Card.Body className="p-4">
+              {/* Opening Times */}
+              <Card className="border-0 shadow-sm">
+                <Card.Body className="p-3">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
                       <div 
                         className="rounded-circle bg-accent text-white d-flex align-items-center justify-content-center"
-                        style={{ width: '60px', height: '60px' }}
+                        style={{ width: '50px', height: '50px' }}
                       >
-                        <i className="fas fa-map-marker-alt fa-lg"></i>
+                        <i className="fas fa-clock"></i>
                       </div>
                     </div>
-                    <div className="ms-4">
-                      <h5 className="mb-2">Service Area</h5>
-                      <p className="mb-0">
-                        Kingston Upon Thames<br />
-                        and surrounding areas
-                      </p>
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-
-              {/* Hours */}
-              <Card className="border-0 shadow-sm">
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-start">
-                    <div className="flex-shrink-0">
-                      <div 
-                        className="rounded-circle bg-primary-custom text-white d-flex align-items-center justify-content-center"
-                        style={{ width: '60px', height: '60px' }}
-                      >
-                        <i className="fas fa-clock fa-lg"></i>
-                      </div>
-                    </div>
-                    <div className="ms-4">
-                      <h5 className="mb-2">Business Hours</h5>
-                      <p className="mb-1">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p className="mb-1">Saturday: 9:00 AM - 4:00 PM</p>
-                      <p className="mb-0">Sunday: Emergency calls only</p>
+                    <div className="ms-3">
+                      <h5 className="mb-2 fs-6">Opening Times</h5>
+                      <ul className="list-unstyled mb-0 small">
+                        <li className="mb-1">
+                          <strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM
+                        </li>
+                        <li className="mb-1">
+                          <strong>Saturday:</strong> 9:00 AM - 4:00 PM
+                        </li>
+                        <li className="mb-1">
+                          <strong>Sunday:</strong> Emergency Only
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Card.Body>
