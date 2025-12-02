@@ -1,0 +1,25 @@
+{
+  "name": "bond-electrics",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "bond-electrics": "file:",
+    "bootstrap": "^5.3.3",
+    "next": "^14.2.0",
+    "nodemailer": "^6.9.13",
+    "react": "^18.3.0",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/nodemailer": "^6.4.14"
+  }
+}
